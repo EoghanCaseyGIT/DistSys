@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <title>Library </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <h3>Please Set Up Your Library By Uploading Your File</h3>
+    <h4>Username:</h4> <p th:text="${username}" />
+
+
+<!--<form action="userLibrary.html" th:action="@{/rest/files/upload}" method="post" enctype="multipart/form-data">-->
+    <!--<p>-->
+        <!--Select a library file to backup : <input type="file" name="myFile" size="45" /> <input type="submit" value="Upload File" />-->
+    <!--</p>-->
+<!--</form>-->
+
+        <form action="/parseSongs"  method="post">
+            <input type="submit" value="Upload Your Songs"/>
+
+        </form>
+
+        <form action="/viewSongs"  method="get" enctype="multipart/form-data">
+
+            <input type="submit" value="View Your Songs"/>
+
+        </form>
+
+        <form action="/search"  method="post">
+            <input type="submit" value="Search a song and edit it!"/>
+
+        </form>
+<!--//action to call the songs from the library-->
+
+
+<br>
+
+</br>
+
+
+        <form action="/parsePlaylist"  method="post">
+            <input type="submit" value="Upload Your Playlists"/>
+
+        </form>
+
+        <form action="viewPlaylists"  method="get" enctype="multipart/form-data">
+
+            <input type="submit" value="View Your Playlists"/>
+        </form>
+
+        <form action="/search"  method="post">
+            <input type="submit" value="Search a playlist and edit it!"/>
+
+        </form>
+
+
+<br>
+        <form action="/">
+                <input type="submit" value="Log Out" />
+        </form>
+
+        </br>
+
+</body>
+</html>
+
