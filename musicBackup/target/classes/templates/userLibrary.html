@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<style type="text/css" media="all">
+
+    @import url("./templates/style.css");
+
+
+</style>
+
+<head>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+
+    <title>Your Personal Backup</title>
+</head>
+
+
+<body>
+
+<h3>Welcome to your library!</h3>
+
+
+THIS IS YOUR LIBRARY, HOPEFULLY YOUR FILE WAS UPLOADED.
+
+
+<form action="songs.html" th:action="@{/getSongs}" method="get" enctype="multipart/form-data">
+
+    <input type="submit" value="View Your Songs"/>
+
+</form>
+<!--//action to call the songs from the library-->
+
+
+
+<form action="playlists.html" th:action="@{/getPlaylists}" method="get" enctype="multipart/form-data">
+
+    <input type="submit" value="View Your Playlists"/>
+</form>
+
+</body>
+</html>
+
+<!--<form action="songs.html" th:action="@{/rest/files/songs}" method="post" enctype="multipart/form-data">-->
+    <!--<p>-->
+        <!--Select a library file to backup : <input type="file" name="myFile" size="45" /> <input type="submit" value="Upload File" />-->
+    <!--</p>-->
+<!--</form>-->
+
+
+<!--<form action="playlists.html" th:action="@{/rest/files/playlists}" method="post" enctype="multipart/form-data">-->
+    <!--<p>-->
+        <!--Select a library file to backup : <input type="file" name="myFile" size="45" /> <input type="submit" value="Upload File" />-->
+    <!--</p>-->
+<!--</form>-->

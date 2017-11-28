@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+    <title>Please Register</title>
+</head>
+<body>
+
+<h2>File Upload Example</h2>
+
+
+<h3> Register Your Account </h3>
+    <form action="#" th:action="@{/}" th:object="${user}" method="post">
+        <table>
+            <tr>
+                <td>Username:</td>
+                <td><input type="text" th:field="*{username}" /></td>
+                <td th:if="${#fields.hasErrors('username')}" th:errors="*{username}">Please Enter a Username</td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" th:field="*{password}" /></td>
+                <td th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Please Enter a Password</td>
+            </tr>
+            <tr>
+                <td><button type="submit">Create User</button></td>
+            </tr>
+        </table>
+    </form>
+
+
+    <h3> Already Registered? Log in here. </h3>
+    <form action="#" th:action="@{/}" th:object="${user}" method="get">
+        <table>
+            <tr>
+                <td>Username:</td>
+                <td><input type="text" th:field="*{username}" /></td>
+                <td th:if="${#fields.hasErrors('username')}" th:errors="*{username}">Please Enter a Username</td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" th:field="*{password}" /></td>
+                <td th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Please Enter a Password</td>
+            </tr>
+            <tr>
+                <td><button type="submit"> Log In </button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
